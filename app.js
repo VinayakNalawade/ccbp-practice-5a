@@ -55,7 +55,7 @@ app.get("/movies/:movieId/", async (request, response) => {
   let query = `SELECT * FROM movie WHERE
       movie_id = ${movieId};`;
 
-  let result = await db.all(query);
+  let result = await db.get(query);
 
   console.log(movieId);
   console.log(result);
